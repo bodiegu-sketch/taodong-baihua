@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>涛动周期论 · 白话版</title>
+<style>
+  :root {
+    --bg: #fdfaf5;
+    --text: #2c2416;
+    --muted: #6b5e4a;
+    --accent: #b8472e;
+    --accent-soft: #e8d5c4;
+    --border: #e0d6c5;
+    --font-serif: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: var(--font-serif);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.85;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  /* ── 封面 ── */
+  .cover {
+    text-align: center;
+    padding: 4rem 2rem 3rem;
+    border-bottom: 2px solid var(--accent-soft);
+    margin-bottom: 3rem;
+  }
+  .cover .book-title {
+    font-size: 2.4rem;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    line-height: 1.4;
+    color: var(--text);
+  }
+  .cover .book-subtitle {
+    font-size: 1.15rem;
+    color: var(--accent);
+    margin-top: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+  }
+  .cover .book-author {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: var(--muted);
+  }
+  .cover .book-desc {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+  }
+
+  /* ── 翻译说明 ── */
+  .about {
+    background: #fefefe;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 3rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  .about h3 { color: var(--accent); margin-bottom: 0.8rem; font-size: 1rem; }
+  .about p { margin-bottom: 0.4rem; }
+
+  /* ── 目录 ── */
+  .toc { margin-bottom: 3rem; }
+  .toc h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 2rem;
+    color: var(--text);
+  }
+
+  .toc-part {
+    margin-bottom: 2rem;
+  }
+  .toc-part-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent-soft);
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.05em;
+  }
+
+  .toc-chapter {
+    display: flex;
+    align-items: baseline;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .toc-chapter:hover { background: rgba(184,71,46,0.04); }
+
+  .toc-chapter .num {
+    font-weight: 700;
+    color: var(--accent);
+    min-width: 2.5rem;
+    font-size: 0.95rem;
+  }
+  .toc-chapter .title {
+    flex: 1;
+    font-size: 0.95rem;
+  }
+  .toc-chapter .title a {
+    color: var(--text);
+    text-decoration: none;
+  }
+  .toc-chapter .title a:hover { color: var(--accent); text-decoration: underline; }
+
+  /* 未翻译的章节 */
+  .toc-chapter.soon .title { color: #c0b8a8; }
+  .toc-chapter.soon .num { color: #c0b8a8; }
+  .toc-chapter .badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.15em 0.6em;
+    border-radius: 10px;
+    margin-left: 0.6rem;
+  }
+  .badge-done { background: #e6f4e3; color: #5a9a57; }
+  .badge-soon { background: #f0ede5; color: #b0a890; }
+
+  /* ── 页脚 ── */
+  footer {
+    text-align: center;
+    padding: 2rem 0 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 600px) {
+    body { padding: 1rem; }
+    .cover { padding: 2rem 0.5rem; }
+    .cover .book-title { font-size: 1.6rem; }
+    .toc-chapter { padding-left: 0.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 封面 -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="cover">
+  <div class="book-title">涛动周期论</div>
+  <div class="book-subtitle">经济周期决定人生财富命运</div>
+  <div class="book-author">原著：周金涛 &nbsp;|&nbsp; 白话翻译：Claude Code</div>
+  <div class="book-desc">
+    周金涛（1972–2016），中信建投证券首席经济学家，被誉为"周期天王"。
+    他用康德拉季耶夫周期理论（康波）精准预测了多次经济拐点，留下"人生发财靠康波"的著名论断。
+    本白话版将原文逐段翻译为通俗易懂的文字，让每个人都能读懂经济周期。
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 翻译说明 -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="about">
+  <h3>📖 关于这个白话版</h3>
+  <p>✅ 原文逐段保留，一字不改</p>
+  <p>✅ 大白话逐段对应，用日常比喻解释专业术语</p>
+  <p>✅ 每章末尾附术语对照表</p>
+  <p>⚠️ 仅供个人学习参考，请购买正版书籍</p>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 目录 -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="toc">
+  <h2>目 录</h2>
+
+  <!-- 第一部分 -->
+  <div class="toc-part">
+    <div class="toc-part-title">第一部分 · 涛动周期</div>
+    <div class="toc-chapter soon">
+      <span class="num">1</span>
+      <span class="title">人生就是一场康波</span>
+      <span class="badge badge-soon">待翻译</span>
+    </div>
+    <div class="toc-chapter soon">
+      <span class="num">2</span>
+      <span class="title">康波周期：长波如何主导大类资产</span>
+      <span class="badge badge-soon">待翻译</span>
+    </div>
+    <div class="toc-chapter soon">
+      <span class="num">3</span>
+      <span class="title">房地产周期：人生财富的锚</span>
+      <span class="badge badge-soon">待翻译</span>
+    </div>
+    <div class="toc-chapter soon">
+      <span class="num">4</span>
+      <span class="title">库存周期：经济的短波呼吸</span>
+      <span class="badge badge-soon">待翻译</span>
+    </div>
+    <div class="toc-chapter soon">
+      <span class="num">5</span>
+      <span class="title">大宗商品周期：资源国的宿命</span>
+      <span class="badge badge-soon">待翻译</span>
+    </div>
+    <div class="toc-chapter soon">
+      <span class="num">6</span>
+      <span class="title">黄金：超越周期的价值</span>
+      <span class="badge badge-soon">待翻译</span>
+    </div>
+  </div>
+
+  <!-- 第二部分 -->
+  <div class="toc-part">
+    <div class="toc-part-title">第二部分 · 大类资产配置</div>
+    <div class="toc-chapter soon">
+      <span class="num">7</span>
+      <span class="title">全球资产配置框架</span>
+      <span class="badge badge-soon">待翻译</span>
+    </div>
+    <div class="toc-chapter soon">
+      <span class="num">8</span>
+      <span class="title">股票：周期中的进攻与防守</span>
+      <span class="badge badge-soon">待翻译</span>
+    </div>
+    <div class="toc-chapter soon">
+      <span class="num">9</span>
+      <span class="title">债券：利率周期的秘密</span>
+      <span class="badge badge-soon">待翻译</span>
+    </div>
+    <div class="toc-chapter soon">
+      <span class="num">10</span>
+      <span class="title">美元与汇率：全球资本的潮汐</span>
+      <span class="badge badge-soon">待翻译</span>
+    </div>
+    <div class="toc-chapter soon">
+      <span class="num">11</span>
+      <span class="title">房地产投资：周期的节奏</span>
+      <span class="badge badge-soon">待翻译</span>
+    </div>
+  </div>
+
+  <!-- 第三部分 -->
+  <div class="toc-part">
+    <div class="toc-part-title">第三部分 · 先生言谈</div>
+    <div class="toc-chapter soon">
+      <span class="num">12</span>
+      <span class="title">宿命与反抗</span>
+      <span class="badge badge-soon">待翻译</span>
+    </div>
+    <div class="toc-chapter soon">
+      <span class="num">13</span>
+      <span class="title">康波中的房地产</span>
+      <span class="badge badge-soon">待翻译</span>
+    </div>
+    <div class="toc-chapter">
+      <span class="num">14</span>
+      <span class="title"><a href="chapters/14-全球变局-如何进行大类资产投资.html">全球变局：如何进行大类资产投资</a></span>
+      <span class="badge badge-done">已翻译</span>
+    </div>
+    <div class="toc-chapter soon">
+      <span class="num">15</span>
+      <span class="title">2016：资源国的逆袭</span>
+      <span class="badge badge-soon">待翻译</span>
+    </div>
+    <div class="toc-chapter soon">
+      <span class="num">16</span>
+      <span class="title">人生财富靠康波</span>
+      <span class="badge badge-soon">待翻译</span>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>涛动周期论 · 白话版 &nbsp;|&nbsp; 原著：周金涛 &nbsp;|&nbsp; 白话翻译：Claude Code</p>
+  <p style="margin-top:0.4rem;">
+    <a href="https://github.com/bodiegu-sketch/taodong-baihua">GitHub 仓库</a>
+  </p>
+</footer>
+
+</body>
+</html>

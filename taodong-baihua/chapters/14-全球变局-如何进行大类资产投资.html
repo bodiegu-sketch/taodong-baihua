@@ -4,206 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>14 全球变局：如何进行大类资产投资 — 涛动周期论 · 白话版</title>
-<style>
-  :root {
-    --bg: #fdfaf5;
-    --text: #2c2416;
-    --muted: #6b5e4a;
-    --accent: #b8472e;
-    --accent-soft: #e8d5c4;
-    --card-bg: #fefefe;
-    --original-bg: #f5f0e8;
-    --baihua-bg: #fafef9;
-    --border: #e0d6c5;
-    --shadow: 0 1px 3px rgba(0,0,0,0.06);
-    --radius: 10px;
-    --font-serif: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    font-family: var(--font-serif);
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.85;
-    padding: 2rem 1.5rem;
-    max-width: 860px;
-    margin: 0 auto;
-  }
-
-  /* ── Header ── */
-  header {
-    text-align: center;
-    padding: 3rem 0 2.5rem;
-    border-bottom: 2px solid var(--accent-soft);
-    margin-bottom: 2.5rem;
-  }
-  header .part {
-    font-size: 0.85rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 0.5rem;
-  }
-  header h1 {
-    font-size: 1.85rem;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    line-height: 1.5;
-    color: var(--text);
-  }
-  header .meta {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.6rem 2rem;
-    margin-top: 1.2rem;
-    font-size: 0.85rem;
-    color: var(--muted);
-  }
-  header .meta span {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-  }
-  header .meta .icon { font-size: 1rem; }
-
-  /* ── Sections ── */
-  section {
-    margin-bottom: 2.4rem;
-    background: var(--card-bg);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    border: 1px solid var(--border);
-    overflow: hidden;
-  }
-  section .heading {
-    font-size: 1.05rem;
-    font-weight: 700;
-    padding: 0.8rem 1.4rem;
-    background: var(--accent-soft);
-    color: var(--accent);
-    letter-spacing: 0.03em;
-    border-bottom: 1px solid var(--border);
-  }
-
-  /* ── Blocks ── */
-  .block { padding: 1.4rem 1.6rem; }
-  .block + .block { border-top: 1px dashed var(--border); }
-
-  .original {
-    background: var(--original-bg);
-    color: #4a3f2f;
-    font-size: 0.92rem;
-    border-left: 3px solid #c4b59a;
-    margin: 0.4rem 0 1rem;
-    padding: 0.8rem 1.2rem;
-    border-radius: 0 8px 8px 0;
-    quotes: none;
-  }
-  .original::before {
-    content: "📜 原文";
-    display: block;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    color: #a08c6e;
-    margin-bottom: 0.4rem;
-    text-transform: uppercase;
-  }
-
-  .baihua {
-    background: var(--baihua-bg);
-    border-left: 3px solid #7fb87c;
-    margin: 0.4rem 0 0;
-    padding: 0.8rem 1.2rem;
-    border-radius: 0 8px 8px 0;
-  }
-  .baihua::before {
-    content: "🔊 大白话";
-    display: block;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    color: #5a9a57;
-    margin-bottom: 0.4rem;
-    text-transform: uppercase;
-  }
-
-  .baihua p { margin-bottom: 0.5rem; }
-  .baihua p:last-child { margin-bottom: 0; }
-
-  .baihua strong {
-    color: #2a6e27;
-    background: #e6f4e3;
-    padding: 0.1em 0.35em;
-    border-radius: 3px;
-  }
-
-  /* ── Highlight box ── */
-  .highlight-box {
-    background: linear-gradient(135deg, #fff8ed, #ffeee0);
-    border: 1px solid #e8c8a0;
-    border-radius: var(--radius);
-    padding: 1.2rem 1.6rem;
-    margin: 1.2rem 0;
-    font-weight: 600;
-  }
-  .highlight-box::before {
-    content: "💡 核心观点";
-    display: block;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    color: var(--accent);
-    margin-bottom: 0.4rem;
-  }
-
-  /* ── Table (glossary) ── */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.88rem;
-    margin: 1rem 0;
-  }
-  th, td {
-    padding: 0.7rem 1rem;
-    text-align: left;
-    border-bottom: 1px solid var(--border);
-  }
-  th {
-    background: var(--accent-soft);
-    color: var(--accent);
-    font-weight: 700;
-    font-size: 0.78rem;
-    letter-spacing: 0.06em;
-  }
-  td:first-child {
-    font-weight: 600;
-    white-space: nowrap;
-  }
-
-  /* ── Footer ── */
-  footer {
-    text-align: center;
-    margin-top: 3rem;
-    padding: 2rem 0 1rem;
-    border-top: 1px solid var(--border);
-    color: var(--muted);
-    font-size: 0.8rem;
-  }
-  footer a { color: var(--accent); text-decoration: none; }
-
-  /* ── Responsive ── */
-  @media (max-width: 600px) {
-    body { padding: 1rem 0.6rem; }
-    header { padding: 1.5rem 0 1.5rem; }
-    header h1 { font-size: 1.4rem; }
-    section .heading { font-size: 0.95rem; padding: 0.7rem 1rem; }
-    .block { padding: 1rem; }
-  }
-</style>
+<link rel="stylesheet" href="../styles/book.css">
 </head>
 <body>
 
@@ -216,6 +17,10 @@
     <span><span class="icon">🎤</span> 2015中国金融论坛</span>
   </div>
 </header>
+
+<div class="back-link">
+  <a href="../index.html">← 返回目录</a>
+</div>
 
 <!-- ═══════════════════════════════════════════ -->
 <section>
@@ -376,8 +181,8 @@
 </section>
 
 <footer>
-  <p>涛动周期论 · 白话版 &nbsp;|&nbsp; 翻译：Claude Code &nbsp;|&nbsp; 仅供个人学习参考</p>
-  <p style="margin-top:0.4rem;"><a href="#">← 返回目录</a></p>
+  <p><a href="../index.html">← 返回目录</a></p>
+  <p style="margin-top:0.6rem;">涛动周期论 · 白话版 &nbsp;|&nbsp; 翻译：Claude Code &nbsp;|&nbsp; 仅供个人学习参考</p>
 </footer>
 
 </body>
