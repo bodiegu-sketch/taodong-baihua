@@ -59,6 +59,12 @@
     <span><span class="icon">📍</span> 中信建投证券研究发展部</span>
   </div>
 </header>
+<!-- ═══════════ 章节内目录 ═══════════ -->
+<details class="chapter-toc" id="chapterToc">
+  <summary>📑 本章目录</summary>
+  <ol id="tocList"><li>加载中...</li></ol>
+</details>
+
 
 <!-- ═══════════════════════════════════════════ -->
 <!-- 开篇 -->
@@ -341,5 +347,26 @@
 </section>
 
 </main>
+
+<!-- 章节目录生成 -->
+<script>
+(function(){
+  const headings = document.querySelectorAll("section .heading");
+  if(!headings.length) return;
+  const list = document.getElementById("tocList");
+  if(!list) return;
+  list.innerHTML = "";
+  headings.forEach(function(h, i){
+    const id = "sec-" + i;
+    h.id = id;
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = "#" + id;
+    a.textContent = h.textContent.trim();
+    li.appendChild(a);
+    list.appendChild(li);
+  });
+})();
+</script>
 </body>
 </html>
