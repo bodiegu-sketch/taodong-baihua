@@ -662,6 +662,27 @@ figure {
   transition: all 0.35s var(--ease-out);
   position: relative;
 }
+
+/* 图表并排布局 */
+.img-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1.4rem 0;
+}
+.img-row figure {
+  flex: 1;
+  min-width: 240px;
+  max-width: 48%;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .img-row figure {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
 figure::after {
   content: "🔍 点击放大";
   position: absolute;
