@@ -344,6 +344,46 @@ footer a { color: var(--accent); text-decoration: none; }
   margin-left: 0;  /* keep content still, sidebar overlays */
 }
 
+/* ── Floating home button ── */
+.float-home {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1000;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  box-shadow: 0 3px 12px rgba(184,71,46,0.35);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.float-home:hover {
+  transform: scale(1.08);
+  box-shadow: 0 5px 18px rgba(184,71,46,0.45);
+}
+.float-home .tooltip {
+  position: absolute;
+  right: 56px;
+  background: var(--text);
+  color: #fff;
+  font-size: 0.72rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+.float-home:hover .tooltip { opacity: 1; }
+
 /* ── Responsive ── */
 @media (max-width: 600px) {
   body { padding: 1rem 0.6rem; }
