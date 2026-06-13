@@ -24,8 +24,6 @@
     margin: 0 auto;
     padding: 2rem 1.5rem;
   }
-
-  /* ── 封面 ── */
   .cover {
     text-align: center;
     padding: 4rem 2rem 3rem;
@@ -60,8 +58,6 @@
     margin-right: auto;
     line-height: 1.8;
   }
-
-  /* ── 翻译说明 ── */
   .about {
     background: #fefefe;
     border: 1px solid var(--border);
@@ -73,8 +69,6 @@
   }
   .about h3 { color: var(--accent); margin-bottom: 0.8rem; font-size: 1rem; }
   .about p { margin-bottom: 0.4rem; }
-
-  /* ── 目录 ── */
   .toc { margin-bottom: 3rem; }
   .toc h2 {
     text-align: center;
@@ -83,10 +77,7 @@
     margin-bottom: 2rem;
     color: var(--text);
   }
-
-  .toc-part {
-    margin-bottom: 2rem;
-  }
+  .toc-part { margin-bottom: 2rem; }
   .toc-part-title {
     font-size: 1.1rem;
     font-weight: 700;
@@ -96,7 +87,6 @@
     margin-bottom: 0.8rem;
     letter-spacing: 0.05em;
   }
-
   .toc-chapter {
     display: flex;
     align-items: baseline;
@@ -105,24 +95,15 @@
     transition: background 0.15s;
   }
   .toc-chapter:hover { background: rgba(184,71,46,0.04); }
-
   .toc-chapter .num {
     font-weight: 700;
     color: var(--accent);
     min-width: 2.5rem;
     font-size: 0.95rem;
   }
-  .toc-chapter .title {
-    flex: 1;
-    font-size: 0.95rem;
-  }
-  .toc-chapter .title a {
-    color: var(--text);
-    text-decoration: none;
-  }
+  .toc-chapter .title { flex: 1; font-size: 0.95rem; }
+  .toc-chapter .title a { color: var(--text); text-decoration: none; }
   .toc-chapter .title a:hover { color: var(--accent); text-decoration: underline; }
-
-  /* 未翻译的章节 */
   .toc-chapter.soon .title { color: #c0b8a8; }
   .toc-chapter.soon .num { color: #c0b8a8; }
   .toc-chapter .badge {
@@ -134,8 +115,6 @@
   }
   .badge-done { background: #e6f4e3; color: #5a9a57; }
   .badge-soon { background: #f0ede5; color: #b0a890; }
-
-  /* ── 页脚 ── */
   footer {
     text-align: center;
     padding: 2rem 0 1rem;
@@ -144,7 +123,6 @@
     font-size: 0.8rem;
   }
   footer a { color: var(--accent); text-decoration: none; }
-
   @media (max-width: 600px) {
     body { padding: 1rem; }
     .cover { padding: 2rem 0.5rem; }
@@ -155,9 +133,6 @@
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════ -->
-<!-- 封面 -->
-<!-- ═══════════════════════════════════════════ -->
 <div class="cover">
   <div class="book-title">涛动周期论</div>
   <div class="book-subtitle">经济周期决定人生财富命运</div>
@@ -169,111 +144,92 @@
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════ -->
-<!-- 翻译说明 -->
-<!-- ═══════════════════════════════════════════ -->
 <div class="about">
   <h3>📖 关于这个白话版</h3>
   <p>✅ 原文逐段保留，一字不改</p>
   <p>✅ 大白话逐段对应，用日常比喻解释专业术语</p>
-  <p>✅ 每章末尾附术语对照表</p>
+  <p>✅ 图表前后加过渡句，让数据不再干巴巴</p>
   <p>⚠️ 仅供个人学习参考，请购买正版书籍</p>
 </div>
 
-<!-- ═══════════════════════════════════════════ -->
-<!-- 目录 -->
-<!-- ═══════════════════════════════════════════ -->
 <div class="toc">
   <h2>目 录</h2>
 
-  <!-- 第一部分 -->
   <div class="toc-part">
     <div class="toc-part-title">第一部分 · 涛动周期</div>
     <div class="toc-chapter">
-      <span class="num">1</span>
-      <span class="title"><a href="chapters/18-人生就是一场康波.html">人生就是一场康波</a></span>
+      <span class="num">01</span>
+      <span class="title"><a href="chapters/01-人生财富靠康波.html">人生财富靠康波：康波中的价格波动</a></span>
       <span class="badge badge-done">已翻译</span>
     </div>
     <div class="toc-chapter">
-      <span class="num">2</span>
+      <span class="num">02</span>
       <span class="title"><a href="chapters/02-繁荣的起点-工业化转型期的投资全景.html">繁荣的起点：工业化转型期的投资全景</a></span>
       <span class="badge badge-done">已翻译</span>
     </div>
     <div class="toc-chapter">
-      <span class="num">3</span>
+      <span class="num">03</span>
       <span class="title"><a href="chapters/03-色即是空-世界经济的共生模式.html">色即是空：世界经济的共生模式</a></span>
       <span class="badge badge-done">已翻译</span>
     </div>
     <div class="toc-chapter">
-      <span class="num">4</span>
+      <span class="num">04</span>
       <span class="title"><a href="chapters/04-长波衰退中的增长与通胀.html">长波衰退中的增长与通胀</a></span>
       <span class="badge badge-done">已翻译</span>
     </div>
     <div class="toc-chapter">
-      <span class="num">5</span>
+      <span class="num">05</span>
       <span class="title"><a href="chapters/05-走向成熟-中国经济即将V形反转.html">走向成熟：中国经济即将V形反转</a></span>
       <span class="badge badge-done">已翻译</span>
     </div>
-    <div class="toc-chapter">
-      <span class="num">6</span>
-      <span class="title"><a href="chapters/06-结构主义的薪火.html">结构主义的薪火：周期波动、结构演进与制度变革</a></span>
-      <span class="badge badge-done">已翻译</span>
-    </div>
-    <div class="toc-chapter">
-      <span class="num">7</span>
-      <span class="title"><a href="chapters/07-三周期嵌套-从熊彼特到罗斯托.html">三周期嵌套：从熊彼特到罗斯托</a></span>
-      <span class="badge badge-done">已翻译</span>
+    <div class="toc-chapter soon">
+      <span class="num">06</span>
+      <span class="title">结构主义的薪火：周期波动、结构演进与制度变革</span>
+      <span class="badge badge-soon">待翻译</span>
     </div>
     <div class="toc-chapter soon">
-      <span class="num">8</span>
+      <span class="num">07</span>
+      <span class="title">三周期嵌套：从熊彼特到罗斯托</span>
+      <span class="badge badge-soon">待翻译</span>
+    </div>
+    <div class="toc-chapter soon">
+      <span class="num">08</span>
       <span class="title">康波衰退二次冲击正在靠近</span>
       <span class="badge badge-soon">待翻译</span>
     </div>
   </div>
 
-  <!-- 第二部分 -->
   <div class="toc-part">
     <div class="toc-part-title">第二部分 · 大类资产配置</div>
     <div class="toc-chapter soon">
-      <span class="num">7</span>
-      <span class="title">全球资产配置框架</span>
-      <span class="badge badge-soon">待翻译</span>
-    </div>
-    <div class="toc-chapter soon">
-      <span class="num">8</span>
-      <span class="title">股票：周期中的进攻与防守</span>
-      <span class="badge badge-soon">待翻译</span>
-    </div>
-    <div class="toc-chapter soon">
-      <span class="num">9</span>
-      <span class="title">债券：利率周期的秘密</span>
+      <span class="num">09</span>
+      <span class="title">改造"美林投资时钟"：全球大类资产配置框架研究</span>
       <span class="badge badge-soon">待翻译</span>
     </div>
     <div class="toc-chapter soon">
       <span class="num">10</span>
-      <span class="title">美元与汇率：全球资本的潮汐</span>
+      <span class="title">美元破百的全球影响</span>
       <span class="badge badge-soon">待翻译</span>
     </div>
     <div class="toc-chapter soon">
       <span class="num">11</span>
-      <span class="title">房地产投资：周期的节奏</span>
+      <span class="title">世界大宗商品周期研究</span>
       <span class="badge badge-soon">待翻译</span>
     </div>
-  </div>
-
-  <!-- 第三部分 -->
-  <div class="toc-part">
-    <div class="toc-part-title">第三部分 · 先生言谈</div>
     <div class="toc-chapter soon">
       <span class="num">12</span>
-      <span class="title">宿命与反抗</span>
+      <span class="title">康波中的房地产周期研究</span>
       <span class="badge badge-soon">待翻译</span>
     </div>
     <div class="toc-chapter soon">
       <span class="num">13</span>
-      <span class="title">康波中的房地产</span>
+      <span class="title">康波体系下的黄金价格</span>
       <span class="badge badge-soon">待翻译</span>
     </div>
+  </div>
+
+  <div class="toc-part">
+    <div class="toc-part-title">第三部分 · 先生言谈</div>
     <div class="toc-chapter">
       <span class="num">14</span>
       <span class="title"><a href="chapters/14-全球变局-如何进行大类资产投资.html">全球变局：如何进行大类资产投资</a></span>
