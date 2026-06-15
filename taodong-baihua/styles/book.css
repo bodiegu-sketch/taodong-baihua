@@ -356,6 +356,12 @@ footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
 #toc-toggle:checked ~ .toc-btn span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
 #toc-toggle:checked ~ .toc-btn span:nth-child(2) { opacity: 0; }
 #toc-toggle:checked ~ .toc-btn span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+#toc-toggle:checked ~ .nav-btn {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
 
 /* Overlay */
 .toc-overlay {
