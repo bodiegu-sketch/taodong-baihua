@@ -677,10 +677,26 @@ figure {
   max-width: 48%;
   margin: 0;
 }
+
+/* Keep charts inside text blocks aligned with section-level charts. */
+.block > figure {
+  margin-left: -1.8rem;
+  margin-right: -1.8rem;
+}
+.block > .img-row {
+  margin-left: -1.8rem;
+  margin-right: -1.8rem;
+}
+
 @media (max-width: 600px) {
   .img-row figure {
     max-width: 100%;
     min-width: 100%;
+  }
+  .block > figure,
+  .block > .img-row {
+    margin-left: -1rem;
+    margin-right: -1rem;
   }
 }
 figure::after {
